@@ -1,0 +1,16 @@
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<h1><%= @blog.title %></h1>
+
+<!-- Post Content -->
+
+<h2><%= @blog.body %></h2>
+<br>
+
+<div>
+  <div><%= @blog.comments.count %> Comments</div>
+      <%= comments_tree_for @blog.comments.roots %>
+      <h5>Add a new comment here:</h5>
+      <%= link_to "new comment", new_blog_comment_path(@blog) %>
+</div>
+
