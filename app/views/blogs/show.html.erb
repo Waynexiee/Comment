@@ -11,6 +11,6 @@
   <div><%= @blog.comments.count %> Comments</div>
       <%= comments_tree_for @blog.comments.roots %>
       <h5>Add a new comment here:</h5>
-      <%= link_to "new comment", new_blog_comment_path(@blog) %>
+      <%= render 'comments/form',blog_id: @blog %>
 </div>
 
